@@ -2,7 +2,7 @@
 
 Description: I am building something.
 
-## :computer: [Click here](https://kateyvonnenow.github.io/tic-tac-toe/) to stay with me!
+## :computer: [Click here](https://kateyvonnenow.github.io/tic-tac-toe/) to play tic tac toe!
 
 ## :page_facing_up: About
 
