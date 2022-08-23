@@ -1,37 +1,45 @@
 # Tic Tac Toe
-The briefest description of my cool project and why you should all use it.
 
-## :computer: [Click here](#) to see my live project!
+Description: I am building something.
+
+## :computer: [Click here](https://www.youtube.com/watch?v=Bq1LHWaQtTI&list=RDBq1LHWaQtTI&start_radio=1) to stay with me!
 
 ## :page_facing_up: About
-- How to use my awesome project.
+
+- How to use my awesome project
 - Download instructions (if relevant):
-```zsh
+
+```js
 $ git clone my-awesome-app
 $ cd my-awesome-app
 $ node app.js
 ```
-- Add in-app screenshots.
+- Add in-app screenschots.
 
-## :pencil2: Planning & Problem Solving
+## :pencil2: Planning & problem Solving
+
 - Talk about approach to the problem.
 - Add screenshots/drawings of doodles/plans during the planning phase.
-- Flow charts of app logic.
-![Wireframing](https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
+- Cool picture.
+![alt text](https://images.unsplash.com/photo-1660477094366-c9210ee38c17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)
 
 ## :rocket: Cool tech
+
 - Programming languages
 - Libraries
 - Animations
-- Anything else you'd be proud to show your parents
+- Anything else I'd be proud to show my parents
 
-## :scream: Bugs to fix :poop:
+## :scream: bugs to fix :shit:
+
 - Anything a little broken
 - Anything a LOT broken
-- Buttons to not click too many times (cause its broken :unamused:)
+- Buttons to not click too many times (cuz it's broken :unamused:)
 
 ## :sob: Lessons learnt
+
 What I would do differently if I could wind back the clock...
 
 ## :white_check_mark: Future features
+
 Cool things I would add if I can keep working on this
