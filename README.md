@@ -2,7 +2,7 @@
 
 Description: I am building something.
 
-## :computer: [Click here]([https://www.youtube.com/watch?v=Bq1LHWaQtTI&list=RDBq1LHWaQtTI&start_radio=1](https://kateyvonnenow.github.io/tic-tac-toe/)) to stay with me!
+## :computer: [Click here](https://kateyvonnenow.github.io/tic-tac-toe/) to stay with me!
 
 ## :page_facing_up: About
 
