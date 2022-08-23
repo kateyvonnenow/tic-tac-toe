@@ -18,10 +18,15 @@ $ node app.js
 
 ## :pencil2: Planning & problem Solving
 
-- Talk about approach to the problem.
-- Add screenshots/drawings of doodles/plans during the planning phase.
-- Cool picture.
-![alt text](https://images.unsplash.com/photo-1660477094366-c9210ee38c17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)
+- Set up a 3 x 3 grid as a playing field.
+- Player 1 will be X
+- Player 2 will be O
+- Ensure that after Player 1’s turn, it will be Player 2’s turn and after Player 2’s turn, it will be Player 1’s turn. (.toggle??)
+- No skips
+- Ensure each grid square can only be “taken” once in a game and can not be “taken over” by the opponent player on their turn.
+- Ensure that whoever is the first player to “take over” 3 grid squares in a vertical/horizontal/diagonal row is the winner of the game.
+- When none of the players “take over” 3 grids in a row, the game should be a draw.
+- Provide the option to play again once a games is won or drawn.
 
 ## :rocket: Cool tech
 
