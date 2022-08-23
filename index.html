@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="" href="index.js">
+</head>
+<body>
+    <main class="background">
+        <section class="title">
+            <h1>Tic Tac Toe</h1>
+        </section>
+        <section class="display">
+            Player <span class="display-player playerX">X</span>
+        </section>
+        <section class="container" >
+            <div class="tile RA C1 D1"></div>
+            <div class="tile RA C2"></div>
+            <div class="tile RA C3 D2"></div>
+            <div class="tile RB C1"></div>
+            <div class="tile RB C2 D1 D2"></div>
+            <div class="tile RB C3"></div>
+            <div class="tile RC C1 D2"></div>
+            <div class="tile RC C2"></div>
+            <div class="tile RC C3 D1"></div>
+        </section>
+        <section class="display announcer hide">
+        </section>
+        <section class="controls">
+            <button class="reset">Reset</button>
+        </section>
+    </main>
+    <script>
+        // Players
+        var Player1 = "X"
+        var Player2 = "O"
+        var Player1Turn = true
+
+        // Playing field Components
+        var playingField = document.querySelector(".container")
+        var rowA = document.querySelectorAll('.RA')
+        var rowB = document.querySelectorAll('.RB')
+        var rowC = document.querySelectorAll('.RC')
+        var column1 = document.querySelectorAll('.C1')
+        var column2 = document.querySelectorAll('.C2')
+        var column3 = document.querySelectorAll('.C3')
+        var diagonal1 = document.querySelectorAll('.D1')
+        var diagonal2 = document.querySelectorAll('.D2')
+        var everyTile = document.querySelectorAll('.tile')
+
+        // Player switch turns
+        playingField.addEventListener('click', function(event) {
+            var selection = event.target
+            var winner = null
+
+            if (selection.textContent !== Player1 && selection.textContent !== Player2) {
+                if (Player1Turn === true) {
+                    selection.textContent = Player1
+                    Player1Turn = false
+                } else {
+                    selection.textContent = Player2
+                    Player1Turn = true
+                }   
+            }      
+
+            function winningScenario(playerX) {
+                if (rowA[0].textContent === playerX && rowA[1].textContent === playerX && rowA[2].textContent === playerX) { 
+                console.log(playerX + " wins!")
+                return winner = playerX
+                } else if (rowB[0].textContent === playerX && rowB[1].textContent === playerX && rowB[2].textContent === playerX) { 
+                    console.log(playerX + " wins!")
+                    return winner = playerX
+                } else if (rowC[0].textContent === playerX && rowC[1].textContent === playerX && rowC[2].textContent === playerX) { 
+                    console.log(playerX + " wins!")
+                    return winner = playerX
+                } else if (column1[0].textContent === playerX && column1[1].textContent === playerX && column1[2].textContent === playerX) { 
+                    console.log(playerX + " wins!")
+                    return winner = playerX
+                } else if (column2[0].textContent === playerX && column2[1].textContent === playerX && column2[2].textContent === playerX) { 
+                    console.log(playerX + " wins!")
+                    return winner = playerX
+                } else if (column3[0].textContent === playerX && column3[1].textContent === playerX && column3[2].textContent === playerX) { 
+                    console.log(playerX + " wins!")
+                    return winner = playerX
+                } else if (diagonal1[0].textContent === playerX && diagonal1[1].textContent === playerX && diagonal1[2].textContent === playerX) { 
+                    console.log(playerX + " wins!")
+                    return winner = playerX
+                } else if (diagonal2[0].textContent === playerX && diagonal2[1].textContent === playerX && diagonal2[2].textContent === playerX) { 
+                    console.log(playerX + " wins!")
+                    return winner = playerX
+                } 
+            }
+
+            winningScenario(Player1)
+            winningScenario(Player2)
+
+            if (winner === Player1) {
+                alert('Player 1 wins!')
+            } else if (winner === Player2) {
+                alert('Player 2 wins!')
+            } else if (rowA[0].textContent !== '' && rowA[1].textContent !== '' && rowA[2].textContent !== '' && rowB[0].textContent !== '' && rowB[1].textContent !== '' && rowB[2].textContent !== '' && rowC[0].textContent !== '' && rowC[1].textContent !== '' && rowC[2].textContent !== '') {
+                    console.log("It's a draw!")
+                    alert("It's a draw!")
+            }
+        })
+        
+        
+    </script>
+</body>
+</html>
