@@ -7,14 +7,20 @@
     <title>TicTacToe</title>
     <link rel="stylesheet" href="style.css">
     <link rel="" href="index.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100&family=Playfair+Display:ital@0;1&family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
 </head>
 <body>
     <main class="background">
         <section class="title">
-            <h1>Tic Tac Toe</h1>
+            <h1>TIC TAC TOE</h1>
         </section>
-        <section class="display">
-            <h3>hello</h3>
+        <section class="display player">
+            <h3 class="display">hello</h3>
         </section>
         <section class="container" >
             <div class="tile RA C1 D1"></div>
@@ -27,9 +33,9 @@
             <div class="tile RC C2"></div>
             <div class="tile RC C3 D1"></div>
         </section>
-        <section class="display announcer hide">
+        <section class="display">
         </section>
-        <section class="controls">
+        <section class="menu">
             <button class="replay">replay</button>
         </section>
     </main>
@@ -38,6 +44,7 @@
         var Player1 = "X"
         var Player2 = "O"
         var Player1Turn = true
+        var winner = null
 
         // Playing field Components
         var playingField = document.querySelector(".container")
@@ -51,20 +58,55 @@
         var diagonal2 = document.querySelectorAll('.D2')
         var everyTile = document.querySelectorAll('.tile')
 
+        // Buttons
+        var replayButton = document.querySelector('.replay')
+
+        // function winningScenario(playerX) {
+        //     if (rowA[0].textContent === playerX && rowA[1].textContent === playerX && rowA[2].textContent === playerX) { 
+        //     console.log(playerX + " wins!")
+        //     return winner = playerX
+        //     } else if (rowB[0].textContent === playerX && rowB[1].textContent === playerX && rowB[2].textContent === playerX) { 
+        //         console.log(playerX + " wins!")
+        //         return winner = playerX
+        //     } else if (rowC[0].textContent === playerX && rowC[1].textContent === playerX && rowC[2].textContent === playerX) { 
+        //         console.log(playerX + " wins!")
+        //         return winner = playerX
+        //     } else if (column1[0].textContent === playerX && column1[1].textContent === playerX && column1[2].textContent === playerX) { 
+        //         console.log(playerX + " wins!")
+        //         return winner = playerX
+        //     } else if (column2[0].textContent === playerX && column2[1].textContent === playerX && column2[2].textContent === playerX) { 
+        //         console.log(playerX + " wins!")
+        //         return winner = playerX
+        //     } else if (column3[0].textContent === playerX && column3[1].textContent === playerX && column3[2].textContent === playerX) { 
+        //         console.log(playerX + " wins!")
+        //         return winner = playerX
+        //     } else if (diagonal1[0].textContent === playerX && diagonal1[1].textContent === playerX && diagonal1[2].textContent === playerX) { 
+        //         console.log(playerX + " wins!")
+        //         return winner = playerX
+        //     } else if (diagonal2[0].textContent === playerX && diagonal2[1].textContent === playerX && diagonal2[2].textContent === playerX) { 
+        //         console.log(playerX + " wins!")
+        //         return winner = playerX
+        //     } 
+        // }
+        // winningScenario(Player1)
+        // winningScenario(Player2)
+        
+        
+
         // Player switch turns
         playingField.addEventListener('click', function(event) {
-            var selection = event.target
-            var winner = null
-
-            if (selection.textContent !== Player1 && selection.textContent !== Player2) {
-                if (Player1Turn === true) {
-                    selection.textContent = Player1
-                    Player1Turn = false
-                } else {
-                    selection.textContent = Player2
-                    Player1Turn = true
+            if (winner === null) {
+                var selection = event.target
+                if (selection.textContent !== Player1 && selection.textContent !== Player2) {
+                    if (Player1Turn === true) {
+                        selection.textContent = Player1
+                        Player1Turn = false
+                    } else {
+                        selection.textContent = Player2
+                        Player1Turn = true
+                    }   
                 }   
-            }      
+            }
 
             function winningScenario(playerX) {
                 if (rowA[0].textContent === playerX && rowA[1].textContent === playerX && rowA[2].textContent === playerX) { 
@@ -102,12 +144,20 @@
             } else if (winner === Player2) {
                 alert('Player 2 wins!')
             } else if (rowA[0].textContent !== '' && rowA[1].textContent !== '' && rowA[2].textContent !== '' && rowB[0].textContent !== '' && rowB[1].textContent !== '' && rowB[2].textContent !== '' && rowC[0].textContent !== '' && rowC[1].textContent !== '' && rowC[2].textContent !== '') {
-                    console.log("It's a draw!")
-                    alert("It's a draw!")
+                console.log("It's a draw!")
+                alert("It's a draw!")
             }
         })
         
-        
+        // if (winner === Player1) {
+        //     alert('Player 1 wins!')
+        // } else if (winner === Player2) {
+        //     alert('Player 2 wins!')
+        // } else if (rowA[0].textContent !== '' && rowA[1].textContent !== '' && rowA[2].textContent !== '' && rowB[0].textContent !== '' && rowB[1].textContent !== '' && rowB[2].textContent !== '' && rowC[0].textContent !== '' && rowC[1].textContent !== '' && rowC[2].textContent !== '') {
+        //         console.log("It's a draw!")
+        //         alert("It's a draw!")
+        // }
+
     </script>
 </body>
 </html>

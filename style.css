@@ -1,16 +1,43 @@
+body, html {
+    height: 100%;
+    margin: 0%
+}
 .background {
-    background-color: white;
+    background-image: url(https://64.media.tumblr.com/7b031f29f35c2d610401ed67c1ef983d/tumblr_ohn1elTVky1qzl9pho1_1280.gifv);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+    font-family: Silkscreen;
+    color: white;           
+}
+
+h1 {
+    font-size: 4rem;
 }
 
 .container {
     margin: 0 auto;
     display: grid;
+    gap: 5px;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
-    max-width: 300px;
+    max-width: 350px;
+    font-family: Silkscreen;
 }
 .tile {
-    border: 1px solid rgb(0, 0, 0);
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     min-width: 100px;
     min-height: 100px;
     display: flex;
