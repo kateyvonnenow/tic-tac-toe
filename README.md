@@ -1,20 +1,10 @@
 # Tic Tac Toe
 
-Description: I am building something.
+WARNING!!!! Contains flashing images. 
 
 ## :computer: [Click here](https://kateyvonnenow.github.io/tic-tac-toe/) to play tic tac toe!
 
 ## :page_facing_up: About
-
-- How to use my awesome project
-- Download instructions (if relevant):
-
-```js
-$ git clone my-awesome-app
-$ cd my-awesome-app
-$ node app.js
-```
-- Add in-app screenschots.
 
 ## :pencil2: Planning & problem Solving
 
@@ -30,7 +20,7 @@ $ node app.js
 
 ## :rocket: Cool tech
 
-- Programming languages
+- JavaScript + HTML + CSS
 - Libraries
 - Animations
 - Anything else I'd be proud to show my parents
