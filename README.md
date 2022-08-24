@@ -21,19 +21,18 @@ WARNING!!!! Contains flashing images.
 ## :rocket: Cool tech
 
 - JavaScript + HTML + CSS
-- Libraries
-- Animations
-- Anything else I'd be proud to show my parents
 
 ## :scream: bugs to fix :shit:
 
-- Anything a little broken
-- Anything a LOT broken
-- Buttons to not click too many times (cuz it's broken :unamused:)
+- ~~Continuous win count upon clicking on tile (despite player only winning once lol)~~
+- ~~Replay button toggling its opacity on/off upon clicking on tile~~
+- Replay button showing below the background
 
 ## :sob: Lessons learnt
 
 What I would do differently if I could wind back the clock...
+
+I would make it better.
 
 ## :white_check_mark: Future features
 
