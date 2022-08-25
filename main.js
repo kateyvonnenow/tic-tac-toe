@@ -10,9 +10,11 @@ musicButton.addEventListener('click', function(event) {
     if(audioContext.state === 'suspended') {
         audioContext.resume()
         console.log('meow')
+        console.log(audioContext)
+        audio.play()
+    } else {
+        audio.pause()
     }
-    console.log(audioContext)
-    audio.play()
 })
 
 // Players
