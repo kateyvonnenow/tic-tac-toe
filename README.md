@@ -36,13 +36,14 @@ Upon opening the game, both players will be asked to enter a name of their choos
 - ~~Replay button toggling its opacity on/off upon clicking on tile~~
 - ~~Replay button showing below the background~~
 - Music may or may not play
-- When page first loads, all the hidden DOM elements are shown.
+- When page first loads (atleast on chrome), all the hidden DOM elements are visible when they are not supposed to :rage:
 
 ## :sob: Lessons learnt
 
 What I would do differently if I could wind back the clock...
 
-- I would spend more time organising the code.
+- I would spend more time organising and cleaning the code.
+- Make the code more dynamic and adaptive to implementing DOM changes.
 - Plan and design more features.
 
 ## :white_check_mark: Future features
