@@ -1,19 +1,19 @@
 //Background music
-const audioContext = new AudioContext();
-const audio = new Audio("./Savage.mp3")
-const source = audioContext.createMediaElementSource(audio)
-source.connect(audioContext.destination)
+// const audioContext = new AudioContext();
+// const audio = new Audio("./Savage.mp3")
+// const source = audioContext.createMediaElementSource(audio)
+// source.connect(audioContext.destination)
 
-var musicButton = document.querySelector('.music')
+// var musicButton = document.querySelector('.music')
 
-musicButton.addEventListener('click', function(event) {
-    if(audioContext.state === 'suspended') {
-        audioContext.resume()
-        console.log('meow')
-    }
-    console.log(audioContext)
-    audio.play()
-})
+// musicButton.addEventListener('click', function(event) {
+//     if(audioContext.state === 'suspended') {
+//         audioContext.resume()
+//         console.log('meow')
+//     }
+//     console.log(audioContext)
+//     audio.play()
+// })
 
 // Players
 var Player1 = "X"
