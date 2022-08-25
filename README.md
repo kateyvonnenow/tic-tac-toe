@@ -1,18 +1,18 @@
 # Tic Tac Toe
 
-## :warning: WARNING!!!! Contains flashing images. 
+## :warning: WARNING!!!! Contains some flashing images. 
 
-## :video_game: [Play](https://kateyvonnenow.github.io/tic-tac-toe/) Tic Tac Toe!
+## :video_game: [Play](https://kateyvonnenow.github.io/tic-tac-toe/) Tic Tac Toe now!
 
 ## :book: About + How to Play
 
 Just a basic 2 player Tic Tac Toe Game - but with a dash of pink! 
-Upon opening the game, both players will be asked as to how they would like to be addressed throughout the game. Each player shall enter a name of their choosing (or not), and when ready to play - click the 'ready' button!
+Upon opening the game, both players will be asked to enter a name of their choosing (or not). When ready to play, both players proceed to clicking the 'ready' button!
 
 :cake: FEATURES: :cake:
 - Win count
 - Varying Background themes (Just click on the Tic Tac Toe title to change backgrounds)
-- Music (if not playing on google chrome)
+- Music (maybe)
 
 ## :pencil2: Planning & problem Solving
 
@@ -35,14 +35,18 @@ Upon opening the game, both players will be asked as to how they would like to b
 - ~~Continuous win count upon clicking on tile (despite player only winning once lol)~~
 - ~~Replay button toggling its opacity on/off upon clicking on tile~~
 - ~~Replay button showing below the background~~
-- Music may not play :(
+- Music may or may not play
+- When page first loads, all the hidden DOM elements are shown.
 
 ## :sob: Lessons learnt
 
 What I would do differently if I could wind back the clock...
 
-I would make it better.
+- I would spend more time organising the code.
+- Plan and design more features.
 
 ## :white_check_mark: Future features
 
-Cool things I would add if I can keep working on this
+- Sound effects upon every user interaction
+- Customizable avatars
+- Set timer
