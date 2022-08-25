@@ -22,18 +22,20 @@
         <div class="menu">
             <form action="">
                 <section class="player1_menu players_menu" >
+                    <span class="p1_ready"></span>
                     <input class="player1_name names" type="text" placeholder="P1 Name">
                     <button class="player1_ok ready_button">Ready</button>
                 </section>
                 <h3 class="vs" >vs</h3>
                 <section class="player2_menu players_menu" >
+                    <span class="p2_ready"></span>
                     <input class="player2_name names" type="text" placeholder="P2 Name">
                     <button class="player2_ok ready_button">Ready</button>
                 </section>
             </form>
         </div>
         <section class="display">
-            <h2 class="display_player">Player 1 Begin.</h2>
+            <h2 class="display_player">Begin.</h2>
         </section>
         <section class="container" >
             <div class="tile RA C1 D1"></div>
@@ -58,6 +60,8 @@
         // Players
         var Player1 = "X"
         var Player2 = "O"
+        var player1Name = 'Player 1'
+        var player2Name = 'Player 2'
         var Player1Turn = true
         var winner = null
 
@@ -77,18 +81,68 @@
         var everyTile = document.querySelectorAll('.tile')
 
         // Buttons
-        var title = document.querySelector('h1')
-        var player1Ready = document.querySelector('.player1_ok')
-        var player2Ready = document.querySelector('.player2_ok')
+        var titleButton = document.querySelector('h1')
+        var player1ReadyButton = document.querySelector('.player1_ok')
+        var player2ReadyButton = document.querySelector('.player2_ok')
         var replayButton = document.querySelector('.replay')
 
         // Game Status
         var Player1WinCount = 0
         var Player2WinCount = 0
+        var player1IsReady = false
+        var player2IsReady = false
         var gameStatus = true
 
         // Name Choosing
+        player1ReadyButton.addEventListener('click', function(event) {
+            event.preventDefault()
+            player1Name = Player1NameInput.value
+            if (Player1NameInput.value === '') {
+                player1Name = 'Player 1'
+            }
+            document.querySelector('.player1_name').style.display = 'none'
+            document.querySelector('.player1_ok').style.display = 'none'
+            document.querySelector('.p1_ready').textContent = player1Name + " is ready"
+            console.log(player1Name)
+            player1IsReady = true
+
         
+            if (player1IsReady === true && player2IsReady === true) {
+                document.querySelector('.menu').style.visibility = 'hidden'
+                document.querySelector('.display').style.visibility = 'visible'
+                document.querySelector('.container').style.visibility = 'visible'
+                document.querySelector('.display_player').textContent = player1Name + ", begin."
+                document.querySelector('.title').style.marginBottom = '-70px'
+            }
+        })
+
+        player2ReadyButton.addEventListener('click', function(event) {
+            event.preventDefault()
+            player2Name = Player2NameInput.value
+            if (Player2NameInput.value === '') {
+                player2Name = 'Player 2'
+            } 
+            document.querySelector('.player2_name').style.display = 'none'
+            document.querySelector('.player2_ok').style.display = 'none'
+            document.querySelector('.p2_ready').textContent = player2Name + " is ready"
+            console.log(player2Name)
+            player2IsReady = true
+
+            
+            if (player1IsReady === true && player2IsReady === true) {
+                document.querySelector('.menu').style.visibility = 'hidden'
+                document.querySelector('.display').style.visibility = 'visible'
+                document.querySelector('.container').style.visibility = 'visible'
+                document.querySelector('.display_player').textContent = player1Name + ", begin."
+                document.querySelector('.title').style.marginBottom = '-70px'
+            }
+        })
+
+        console.log('test before')
+        if (player1IsReady === true && player2IsReady === true) {
+            document.querySelector('.menu').style.display = 'none'
+            console.log('test after')
+        }
 
         // Player switch turns
         playingField.addEventListener('click', function playGame(event) {
@@ -97,11 +151,11 @@
                 if (selection.textContent !== Player1 && selection.textContent !== Player2) {
                     if (Player1Turn === true) {
                         selection.textContent = Player1
-                        document.querySelector('.display_player').textContent = "Player 2's turn"
+                        document.querySelector('.display_player').textContent = player2Name + "'s turn"
                         Player1Turn = false
                     } else {
                         selection.textContent = Player2
-                        document.querySelector('.display_player').textContent = "Player 1's turn"
+                        document.querySelector('.display_player').textContent = player1Name + "'s turn"
                         Player1Turn = true
                     }   
                 }   
@@ -163,16 +217,16 @@
             
             if (winner === Player1 && gameStatus === true) {
                 Player1WinCount = Player1WinCount + 1
-                document.querySelector('.display_player').textContent = "Player 1 wins!"
+                document.querySelector('.display_player').textContent = player1Name + " wins!"
                 document.querySelector('.replay').classList.toggle('hidden')
-                document.querySelector('.player1_win_count').textContent = "Player 1 wins: " + Player1WinCount
+                document.querySelector('.player1_win_count').textContent = player1Name + " has won " + Player1WinCount
                 gameStatus = false
 
             } else if (winner === Player2 && gameStatus === true) {
                 Player2WinCount = Player2WinCount + 1
-                document.querySelector('.display_player').textContent = "Player 2 wins!"
+                document.querySelector('.display_player').textContent = player2Name + " wins!"
                 document.querySelector('.replay').classList.toggle('hidden')
-                document.querySelector('.player2_win_count').textContent = "Player 2 wins: " + Player2WinCount
+                document.querySelector('.player2_win_count').textContent = player2Name + " has won " + Player2WinCount
                 gamestatus = false
 
             } else if (rowA[0].textContent !== '' && rowA[1].textContent !== '' && rowA[2].textContent !== '' && rowB[0].textContent !== '' && rowB[1].textContent !== '' && rowB[2].textContent !== '' && rowC[0].textContent !== '' && rowC[1].textContent !== '' && rowC[2].textContent !== '') {
@@ -183,7 +237,7 @@
             }
         })
 
-        title.addEventListener('click', function changeBackground(event) {
+        titleButton.addEventListener('click', function changeBackground(event) {
             if (document.querySelector('.main').className.includes('background2') === true) {
                 document.querySelector('.main').classList.remove('background2')
                 document.querySelector('.main').classList.add('background3')
@@ -206,7 +260,7 @@
                     everyTile[i].classList.remove('tileWinner')
                 } 
             }
-            document.querySelector('.display_player').textContent = "Player 1 Begin."
+            document.querySelector('.display_player').textContent = player1Name + ", Begin."
             document.querySelector('.replay').classList.toggle('hidden')
             Player1Turn = true
             winner = null

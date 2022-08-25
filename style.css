@@ -80,13 +80,8 @@ h1 {
     margin-bottom: -400px;
     margin-top: 200px;
     z-index: 2;
-    transition: 1s all;
+    /* transition: 1s all; */
 }
-
-.display {
-    visibility: hidden;
-}
-
 .vs {
     margin: auto;
     justify-content: center;
@@ -135,6 +130,10 @@ form {
 .ready_button:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(225, 0, 191);
+}
+
+.display {
+    visibility: hidden;
 }
 
 .container {
