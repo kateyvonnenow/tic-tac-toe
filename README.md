@@ -1,10 +1,18 @@
 # Tic Tac Toe
 
-WARNING!!!! Contains flashing images. 
+## :warning: WARNING!!!! Contains flashing images. 
 
-## :computer: [Click here](https://kateyvonnenow.github.io/tic-tac-toe/) to play tic tac toe!
+## :video_game: [Play](https://kateyvonnenow.github.io/tic-tac-toe/) Tic Tac Toe!
 
-## :page_facing_up: About
+## :book: About + How to Play
+
+Just a basic 2 player Tic Tac Toe Game - but with a dash of pink! 
+Upon opening the game, both players will be asked as to how they would like to be addressed throughout the game. Each player shall enter a name of their choosing (or not), and when ready to play - click the 'ready' button!
+
+:cake: FEATURES: :cake:
+- Win count
+- Varying Background themes (Just click on the Tic Tac Toe title to change backgrounds)
+- Music (if not playing on google chrome)
 
 ## :pencil2: Planning & problem Solving
 
@@ -26,7 +34,8 @@ WARNING!!!! Contains flashing images.
 
 - ~~Continuous win count upon clicking on tile (despite player only winning once lol)~~
 - ~~Replay button toggling its opacity on/off upon clicking on tile~~
-- Replay button showing below the background
+- ~~Replay button showing below the background~~
+- Music may not play :(
 
 ## :sob: Lessons learnt
 
