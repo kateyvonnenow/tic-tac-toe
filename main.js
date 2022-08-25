@@ -67,6 +67,7 @@ player1ReadyButton.addEventListener('click', function(event) {
 
     if (player1IsReady === true && player2IsReady === true) {
         document.querySelector('.menu').style.visibility = 'hidden'
+        document.querySelector('.music').style.display = 'none'
         document.querySelector('.display').style.visibility = 'visible'
         document.querySelector('.container').style.visibility = 'visible'
         document.querySelector('.display_player').textContent = player1Name + ", begin."
@@ -89,6 +90,7 @@ player2ReadyButton.addEventListener('click', function(event) {
     
     if (player1IsReady === true && player2IsReady === true) {
         document.querySelector('.menu').style.visibility = 'hidden'
+        document.querySelector('.music').style.display = 'none'
         document.querySelector('.display').style.visibility = 'visible'
         document.querySelector('.container').style.visibility = 'visible'
         document.querySelector('.display_player').textContent = player1Name + ", begin."
