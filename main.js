@@ -11,7 +11,7 @@ musicButton.addEventListener('click', function(event) {
         audioContext.resume()
         console.log(audioContext)
         audio.play()
-    } else if (audio.paused() === true) {
+    } else if (audio.paused === true) {
         audio.play()
     } else {
         audio.pause()
