@@ -91,9 +91,10 @@ h1 {
 form {
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
-    margin-top: 120px;
+    margin-top: 150px;
     gap: 20px;
 }
+
 .players_menu {
     display: block;
     max-width: 200px;
@@ -133,13 +134,17 @@ form {
 }
 
 .music {
-    padding: 10px;
     font-size: 0.5rem;
     transition: 1s;
     cursor: pointer;
 }
-.music:hover {
-    font-size: 0.6rem;
+img {
+    max-width: 50px;
+    transition: 1s;
+}
+
+img:hover {
+    max-width: 55px;
 }
 
 .display {
