@@ -35,7 +35,7 @@ Upon opening the game, both players will be asked to enter a name of their choos
 - ~~Continuous win count upon clicking on tile (despite player only winning once lol)~~
 - ~~Replay button toggling its opacity on/off upon clicking on tile~~
 - ~~Replay button showing below the background~~
-- Music may or may not play. If it plays, it doesn't pause.
+- Music may or may not play (depending on browser)
 - When page first loads (atleast on chrome), all the hidden DOM elements are visible when they are not supposed to :rage:
 
 ## :sob: Lessons learnt
