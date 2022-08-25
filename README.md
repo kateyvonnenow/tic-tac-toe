@@ -12,7 +12,7 @@ Upon opening the game, both players will be asked to enter a name of their choos
 :cake: FEATURES :cake:
 - Win count
 - Varying Background themes (Just click on the Tic Tac Toe title to change backgrounds)
-- Music (click on soundwave icon to enable)
+- Music (click on soundwave icon to play/pause)
 
 ## :pencil2: Planning & problem Solving
 
