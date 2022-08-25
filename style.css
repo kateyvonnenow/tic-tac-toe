@@ -91,7 +91,7 @@ h1 {
 form {
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
-    margin-top: 170px;
+    margin-top: 120px;
     gap: 20px;
 }
 .players_menu {
@@ -130,6 +130,16 @@ form {
 .ready_button:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(225, 0, 191);
+}
+
+.music {
+    padding: 10px;
+    font-size: 0.5rem;
+    transition: 1s;
+    cursor: pointer;
+}
+.music:hover {
+    font-size: 0.6rem;
 }
 
 .display {
@@ -173,25 +183,28 @@ form {
     border: 2px solid rgb(255, 0, 255);
 }
 
-.win_count {
+.win_count_group {
     visibility: hidden;
-}
+    display: flex;
+    justify-content: space-between;
+    min-width: 500px;
+    transition: 0.5s;
 
-.hidden {
-    opacity: 0;
 }
 
 .replay {
     width: 300px;
     padding: 10px;
     font-family: Silkscreen;
-    margin-top: 20px;
+    margin: 0%;
     cursor: pointer;
     background-color: rgb(0, 0, 0);
     border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
     color: white;
-    transition: 0.5s;
+    visibility: hidden;
+    opacity: 100%;
+    transition: 0.5s all;
 }
 
 .replay:hover {
