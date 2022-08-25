@@ -9,12 +9,11 @@ var musicButton = document.querySelector('.music')
 musicButton.addEventListener('click', function(event) {
     if(audioContext.state === 'suspended') {
         audioContext.resume()
+        console.log('meow')
     }
     console.log(audioContext)
     audio.play()
 })
-
-
 
 // Players
 var Player1 = "X"
